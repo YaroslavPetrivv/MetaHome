@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&family=Open+Sans:wght@400;600;700&display=swap");
+* {
+  font-family: Lato, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: 0.2s linear;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  height: 100%;
+  width: 100%;
+}
+html body {
+  overflow-x: hidden;
+  background: linear-gradient(280.07deg, #879CB3 -19.71%, #516F91 114.97%);
+  padding: 0 calc(50% - 61rem);
+  margin: auto;
+  margin: 4.9rem auto;
+}
+html body .wrapper {
+  padding: 0 calc(50% - 61rem);
+  margin: auto;
+}
+html body .header {
+  width: 100%;
+  position: relative;
+  z-index: 100;
+  border-radius: 1.68rem;
+  box-shadow: 0px 20.2109px 40.4219px -6.73698px rgba(39, 76, 119, 0.16);
+  height: 5.3rem;
+  background-color: #F8F8FB;
+  color: #516F91;
+  font-weight: 600;
+  font-size: 1.516rem;
+  line-height: 1.8rem;
+}
+html body .header .wrapper {
+  padding: 0 calc(50% - 55.5rem);
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+html body .header .inform-header_left {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+html body .header .inform-header_left .logo {
+  min-width: 14rem;
+  font-size: 1.516rem;
+  color: #274C77;
+  font-weight: 700;
+  line-height: 1.8rem;
+  margin-right: 1.5rem;
+}
+html body .header .inform-header_left .flex-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2.1rem;
+}
+html body .header .inform-header_right {
+  display: flex;
+  align-items: center;
+}
+html body .header .inform-header_right .customize {
+  padding-right: 5.1rem;
+}
+html body .header .inform-header_right .flex-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.3rem;
+}
+html body .header .inform-header_right .flex-wrapper span {
+  font-weight: 700;
+}
+html body .header .inform-header_right .flex-wrapper > svg:hover {
+  cursor: pointer;
+  stroke: red;
+}
+html body .header .inform-header_right .logout {
+  padding-left: 3.46rem;
+  display: flex;
+  align-items: center;
+}
+
+/*# sourceMappingURL=style.css.map */

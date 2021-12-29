@@ -1,0 +1,32 @@
+{
+  "name": "metahome",
+  "version": "1.0.0",
+  "description": "layout in desktop",
+  "main": "index.html",
+  "scripts": {
+    "build": "sass scss/style.scss  css/style.css",
+    "dev": "sass scss/style.scss  css/style.css --watch",
+    "serve": "http-server -c-1 ./",
+    "format:lint:scss": "stylelint **/*.scss",
+    "format:lint:scss:fix": "stylelint **/*.scss --fix",
+    "format:lint:js": "eslint  js/*.js",
+    "format:lint:js:fix": "eslint  js/*.js --fix",
+    "prettier": "prettier --write ."
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^8.5.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.3",
+    "http-server": "^14.0.0",
+    "node-sass": "^7.0.1",
+    "stylelint": "^14.2.0",
+    "stylelint-config-standard": "^24.0.0",
+    "stylelint-config-standard-scss": "^3.0.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "^2.5.1"
+  },
+  "dependencies": {}
+}
