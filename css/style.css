@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&family=Open+Sans:wght@400;600;700&display=swap");
-* {
+*, h1, h2 {
   font-family: Lato, sans-serif;
   margin: 0;
   padding: 0;
@@ -11,24 +11,32 @@
   transition: 0.2s linear;
 }
 
+h1 {
+  font-size: 1rem;
+  line-height: 1.8rem;
+}
+
+h2 {
+  font-size: 2rem;
+  line-height: 1.8rem;
+}
+
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
   height: 100%;
   width: 100%;
 }
-html body {
+
+body {
   overflow-x: hidden;
   background: linear-gradient(280.07deg, #879CB3 -19.71%, #516F91 114.97%);
   padding: 0 calc(50% - 61rem);
   margin: auto;
   margin: 4.9rem auto;
 }
-html body .wrapper {
-  padding: 0 calc(50% - 61rem);
-  margin: auto;
-}
-html body .header {
+
+.header {
   width: 100%;
   position: relative;
   z-index: 100;
@@ -41,57 +49,133 @@ html body .header {
   font-size: 1.516rem;
   line-height: 1.8rem;
 }
-html body .header .wrapper {
+.header .inform_header {
   padding: 0 calc(50% - 55.5rem);
   margin: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   height: 100%;
 }
-html body .header .inform-header_left {
+.header .inform_header__info {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  gap: 8rem;
 }
-html body .header .inform-header_left .logo {
-  min-width: 14rem;
+.header .inform_header__logo a {
   font-size: 1.516rem;
   color: #274C77;
   font-weight: 700;
   line-height: 1.8rem;
-  margin-right: 1.5rem;
 }
-html body .header .inform-header_left .flex-wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 2.1rem;
+.header .inform_header__logo a:hover {
+  color: #879CB3;
 }
-html body .header .inform-header_right {
+.header .inform_header__inform_data {
   display: flex;
   align-items: center;
+  gap: 4rem;
 }
-html body .header .inform-header_right .customize {
-  padding-right: 5.1rem;
-}
-html body .header .inform-header_right .flex-wrapper {
+.header .inform_header__inform_data-s {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   gap: 1.3rem;
 }
-html body .header .inform-header_right .flex-wrapper span {
+.header .inform_header__inform_data-s p {
+  font-weight: 500;
+}
+.header .inform_header__inform_data-s p span {
   font-weight: 700;
 }
-html body .header .inform-header_right .flex-wrapper > svg:hover {
+.header .inform_header__inform_data-s img {
   cursor: pointer;
-  stroke: red;
 }
-html body .header .inform-header_right .logout {
-  padding-left: 3.46rem;
+.header .inform_header__customize {
+  cursor: pointer;
+  font-size: 1.516rem;
+  font-weight: 500;
+  line-height: 1.8rem;
+  background-color: transparent;
+  color: #274C77;
+}
+.header .inform_header__svg-btn {
+  display: flex;
+  cursor: pointer;
+  background-color: transparent;
+}
+.header .inform_header__svg-btn svg:hover path {
+  stroke: #879CB3;
+}
+
+.content {
+  margin-top: -1.5rem;
+  background-color: #E7ECEF;
+  padding: 6.6rem 5.4rem 5.4rem 0;
+  display: flex;
+}
+.content__nav {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.content__main-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.content__item {
+  padding-left: 6rem;
+  min-width: 26.4rem;
+  width: 100%;
+  border-radius: 0rem 1rem 1rem 0rem;
+  color: #274C77;
+}
+.content__item button {
   display: flex;
   align-items: center;
+  gap: 2.7rem;
+  padding: 1.6rem 0;
+  width: 100%;
+  background: transparent;
+  font-size: 1.684rem;
+  font-weight: 600;
+  line-height: 2rem;
+  color: inherit;
+  cursor: pointer;
+}
+.content__item button svg {
+  stroke: #274C77;
+}
+.content__item button svg path {
+  stroke: #274C77;
+}
+.content__item:hover {
+  background-color: #274C77;
+  color: #E7ECEF;
+}
+.content__item:hover svg {
+  stroke: #E7ECEF;
+}
+.content__item:hover svg rect {
+  stroke: #E7ECEF;
+}
+.content__item:hover svg circle {
+  stroke: #E7ECEF;
+}
+.content__item:hover svg path {
+  stroke: #E7ECEF;
+}
+.content .functionality {
+  display: flex;
+  flex-direction: column;
+  gap: 4.7rem;
+}
+.content .functionality__inform-items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4.7rem;
 }
 
 /*# sourceMappingURL=style.css.map */

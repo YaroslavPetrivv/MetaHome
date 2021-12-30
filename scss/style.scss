@@ -2,7 +2,7 @@
 @import 'constans';
 @import 'mixins';
 
-* {
+*, h1, h2 {
   font-family: Lato, sans-serif;
   margin: 0;
   padding: 0;
@@ -14,91 +14,184 @@
   transition: 0.2s linear;
 }
 
+h1 {
+  font-size: 1rem;
+  line-height: 1.8rem;
+}
+
+h2 {
+  font-size: 2rem;
+  line-height: 1.8rem;
+}
+
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
   height: 100%;
   width: 100%;
+}
 
-  body {
-    overflow-x: hidden;
-    background: $mainGradientBackgroundColor;
+body {
+  overflow-x: hidden;
+  background: $mainGradientBackgroundColor;
 
-    @include wrapper;
+  @include wrapper;
 
-    margin: 4.9rem auto;
+  margin: 4.9rem auto;
+}
 
-    .wrapper {
-      @include wrapper;
+.header {
+  width: 100%;
+  position: relative;
+  z-index: 100;
+  border-radius: 1.68rem;
+  box-shadow: $box-shadow;
+  height: 5.3rem;
+  background-color: $boxBackground;
+  color: $halfSecondary;
+  font-weight: 600;
+  font-size: $fontSizeTitleM;
+  line-height: 1.8rem;
+
+  .inform_header {
+    @include wrapper(55.5rem);
+    @include flex-config(space-between, false, false, center, false, wrap);
+
+    height: 100%;
+
+    &__info {
+      @include flex-config(false, false, false, center, 8rem);
     }
 
-    .header {
-      width: 100%;
-      position: relative;
-      z-index: 100;
-      border-radius: 1.68rem;
-      box-shadow: $box-shadow;
-      height: 5.3rem;
-      background-color: $boxBackground;
-      color: $halfSecondary;
-      font-weight: 600;
-      font-size: $fontSizeTitleM;
-      line-height: 1.8rem;
+    &__logo {
+      a {
+        font-size: $fontSizeTitleM;
+        color: $secondary;
+        font-weight: 700;
+        line-height: 1.8rem;
 
-      .wrapper {
-        @include wrapper(55.5rem);
-        @include flex-config(space-between, false, false, center);
-
-        height: 100%;
+        &:hover {
+          color: $secondaryLow;
+        }
       }
+    }
 
-      .inform-header_left {
-        @include flex-config(space-between, false, false, center);
+    &__inform_data {
+      @include flex-config(false, false, false, center, 4rem);
 
-        .logo {
-          min-width: 14rem;
-          font-size: $fontSizeTitleM;
-          color: $secondary;
+    }
+
+    &__inform_data-s {
+      @include flex-config(false, false, false, center, 1.3rem);
+
+      p {
+        font-weight: 500;
+
+        span {
           font-weight: 700;
-          line-height: 1.8rem;
-          margin-right: 1.5rem;
-        }
-
-        .flex-wrapper {
-          @include flex-config(space-between, false, false, center);
-
-          gap: 2.1rem;
         }
       }
 
-      .inform-header_right {
-        @include flex-config(false, false, false, center);
+      img {
+        cursor: pointer;
+      }
+    }
 
-        .customize {
-          padding-right: 5.1rem;
-        }
+    &__customize {
+      cursor: pointer;
+      font-size: $fontSizeTitleM;
+      font-weight: 500;
+      line-height: 1.8rem;
+      background-color: transparent;
+      color: $secondary;
+    }
 
-        .flex-wrapper {
-          @include flex-config(space-between, false, false, center);
+    &__svg-btn {
+      display: flex;
+      cursor: pointer;
+      background-color: transparent;
 
-          gap: 1.3rem;
-
-          span {
-            font-weight: 700;
-          }
-
-          & > svg:hover {
-            cursor: pointer;
-            stroke: red;
-          }
-        }
-
-        .logout {
-          padding-left: 3.46rem;
-
-          @include flex-config(false, false, false, center);
+      & svg:hover {
+        path {
+          stroke: $secondaryLow;
         }
       }
     }
   }
+}
+
+.content {
+  margin-top: -1.5rem;
+  background-color: $primary;
+  padding: 6.6rem 5.4rem 5.4rem 0;
+  @include flex-config(false, false, false, false);
+
+  &__nav {
+    @include flex-config(space-between, false, column, false);
+  }
+
+  &__main-nav {
+    @include flex-config(false, false, column, false, 1rem);
+  }
+
+  &__item {
+    padding-left: 6rem;
+    min-width: 26.4rem;
+    width: 100%;
+    border-radius: 0rem 1rem 1rem 0rem;
+    color: $secondary;
+
+    button {
+      @include flex-config(false, false, false, center, 2.7rem);
+      padding: 1.6rem 0;
+      width: 100%;
+      background: transparent;
+      font-size: $fontSizeTitleS;
+      font-weight: 600;
+      line-height: 2rem;
+      color: inherit;
+      cursor: pointer;
+
+
+      & svg {
+        stroke: $secondary;
+
+        path {
+          stroke: $secondary;
+        }
+      }
+    }
+
+    &:hover {
+      background-color: $secondary;
+      color: $primary;
+
+      & svg {
+        stroke: $primary;
+
+        rect {
+          stroke: $primary;
+        }
+
+        circle {
+          stroke: $primary;
+        }
+
+        path {
+          stroke: $primary;
+        }
+      }
+    }
+  }
+
+  .functionality {
+    @include flex-config(false, false, column, false, 4.7rem);
+
+    &__inform-items {
+      @include flex-config(space-between, false, false, center, 4.7rem);
+    }
+
+
+  }
+
 }

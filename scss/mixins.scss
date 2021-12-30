@@ -8,7 +8,9 @@
   $justify-content: false,
   $flex: false,
   $flex-direction: false,
-  $align-items: false
+  $align-items: false,
+  $gap:false,
+  $flex-wrap:false
 ) {
   display: flex;
 
@@ -26,6 +28,14 @@
 
   @if $align-items != false {
     align-items: $align-items;
+  }
+
+  @if $flex-wrap != false {
+    flex-wrap: $flex-wrap;
+  }
+
+  @if $gap != false {
+    gap: $gap;
   }
 }
 
