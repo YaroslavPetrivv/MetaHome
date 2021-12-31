@@ -5,14 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8022d624-d073-4cc1-84f2-3bbfce267df3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/rovDown.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/StatsChart.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/constans.sass" beforeDir="false" afterPath="$PROJECT_DIR$/scss/constans.sass" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scss/mixins.scss" beforeDir="false" afterPath="$PROJECT_DIR$/scss/mixins.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scss/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/scss/style.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/template.sass" beforeDir="false" afterPath="$PROJECT_DIR$/scss/template.sass" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +78,7 @@
       <recent name="C:\Users\Admin\Desktop\MetaHome" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.format:lint:js:fix">
+  <component name="RunManager" selected="npm.dev">
     <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -130,11 +131,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.format:lint:js:fix" />
         <item itemvalue="npm.prettier" />
         <item itemvalue="npm.format:lint:scss:fix" />
         <item itemvalue="npm.format:lint:scss" />
         <item itemvalue="npm.dev" />
+        <item itemvalue="npm.format:lint:js:fix" />
       </list>
     </recent_temporary>
   </component>
@@ -152,7 +153,9 @@
       <workItem from="1640772124285" duration="700000" />
       <workItem from="1640772864214" duration="202000" />
       <workItem from="1640773084654" duration="20530000" />
-      <workItem from="1640861271624" duration="155000" />
+      <workItem from="1640861271624" duration="16856000" />
+      <workItem from="1640948104860" duration="84000" />
+      <workItem from="1640948225649" duration="4270000" />
     </task>
     <servers />
   </component>

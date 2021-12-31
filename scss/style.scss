@@ -2,7 +2,9 @@
 @import 'constans';
 @import 'mixins';
 
-*, h1, h2 {
+*,
+h1,
+h2 {
   font-family: Lato, sans-serif;
   margin: 0;
   padding: 0;
@@ -24,6 +26,18 @@ h2 {
   line-height: 1.8rem;
 }
 
+h3 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  line-height: 1.8rem;
+  color: $secondary;
+}
+
+button {
+  background-color: transparent;
+  cursor: pointer;
+}
+
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
@@ -35,9 +49,44 @@ body {
   overflow-x: hidden;
   background: $mainGradientBackgroundColor;
 
-  @include wrapper;
+  @include wrapper(61rem, 4.9rem, 4.9rem);
+}
 
-  margin: 4.9rem auto;
+.custom_button-s {
+  width: 3.5rem;
+  height: 1.8rem;
+  box-shadow: 0 6px 12px -4px rgb(39 76 119 / 16%);
+  border-radius: 2rem;
+
+  & input {
+    position: relative;
+    width: 3.5rem;
+    height: 1.8rem;
+    appearance: none;
+    background-color: $btn-toggle;
+    outline: none;
+    border-radius: 2rem;
+
+    &:checked {
+      background-color: $btn-toggle-active;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 1.3rem;
+      height: 1.3rem;
+      border-radius: 2rem;
+      background-color: $white;
+      top: 0.24rem;
+      left: 0.2rem;
+      transition: 0.5s;
+    }
+
+    &:checked::before {
+      left: 2rem;
+    }
+  }
 }
 
 .header {
@@ -78,7 +127,6 @@ body {
 
     &__inform_data {
       @include flex-config(false, false, false, center, 4rem);
-
     }
 
     &__inform_data-s {
@@ -124,6 +172,8 @@ body {
   margin-top: -1.5rem;
   background-color: $primary;
   padding: 6.6rem 5.4rem 5.4rem 0;
+  border-radius: 0 0 1.68rem 1.68rem;
+
   @include flex-config(false, false, false, false);
 
   &__nav {
@@ -138,11 +188,12 @@ body {
     padding-left: 6rem;
     min-width: 26.4rem;
     width: 100%;
-    border-radius: 0rem 1rem 1rem 0rem;
+    border-radius: 0 1rem 1rem 0;
     color: $secondary;
 
     button {
       @include flex-config(false, false, false, center, 2.7rem);
+
       padding: 1.6rem 0;
       width: 100%;
       background: transparent;
@@ -150,8 +201,6 @@ body {
       font-weight: 600;
       line-height: 2rem;
       color: inherit;
-      cursor: pointer;
-
 
       & svg {
         stroke: $secondary;
@@ -185,13 +234,122 @@ body {
   }
 
   .functionality {
-    @include flex-config(false, false, column, false, 4.7rem);
-
-    &__inform-items {
-      @include flex-config(space-between, false, false, center, 4.7rem);
+    .signature {
+      font-size: 1.2rem;
+      font-weight: 600;
+      line-height: 1.4;
+      color: $secondaryLow;
     }
 
+    @include flex-config(false, false, column, false, 4.5rem);
 
+    &__inform-items {
+      @include flex-config(false, false, false, center, 4.5rem, wrap);
+    }
+
+    &__item {
+      background-color: $boxBackground;
+      box-shadow: $box-shadow;
+      padding: 2.1rem 3.6rem 1.7rem 2.1rem;
+      border-radius: 2rem;
+      @include flex-config(false, false, column, center, 1.5rem, wrap);
+
+    }
+
+    &__title {
+      width: 100%;
+      @include flex-config(space-between, false, false, center);
+
+      svg {
+        margin-right: -1.5rem;
+      }
+
+      button:hover {
+        & svg:hover {
+          path {
+            stroke: $secondary;
+          }
+        }
+      }
+    }
+
+    &__flex_weather {
+      @include flex-config(false, false, false, center, 2rem);
+    }
+
+    &__content-weather {
+      @include flex-config(false, false, column, false, 1rem);
+    }
+
+    &__weather_city_name {
+      font-size: $fontSizeTextL;
+      font-weight: 600;
+      line-height: 1.6rem;
+      color: $halfSecondary;
+    }
+
+    &__weather_temperature {
+      font-size: $fontSizeTitleL;
+      font-weight: 700;
+      line-height: 2.4rem;
+      color: $halfSecondary;
+
+    }
+
+    &__weather_value {
+      font-size: $fontSizeTextM;
+      font-weight: 600;
+      line-height: 1.4rem;
+      color: #879CB3;
+
+      p {
+        .blue {
+          color: #00B2FF;
+          padding-right: .8rem;
+        }
+
+        .orange {
+          color: #FF7A00;
+          padding-left: .8rem;
+        }
+      }
+
+    }
+
+    &__flex-temperature {
+      @include flex-config(false, false, column, false, 2rem);
+    }
+
+    &__weather-flex-content {
+      @include flex-config(space-between, false, false, center, 5rem);
+    }
+
+    &__weather-flex-data {
+      @include flex-config(false, false, false, column, center, 1rem);
+    }
+
+    &__weather-flex-btn {
+      @include flex-config(false, false, column, center, 2rem);
+      cursor: pointer;
+
+      svg:hover {
+        path {
+          fill: $secondary;
+        }
+      }
+
+    }
+
+    &__value {
+      @include flex-config(space-between, false, center, center, 1.5rem);
+      font-size: 3.4rem;
+      font-weight: 500;
+      line-height: 4rem;
+    }
+
+    &__weather-flex-signature {
+      @include flex-config(space-between, false, center, center, 1.5rem);
+      width: 105%;
+    }
   }
-
 }
