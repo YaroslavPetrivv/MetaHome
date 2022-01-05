@@ -45,7 +45,6 @@
   $paddingBottom: false
 ) {
   padding: 0 calc(50% - #{$paddingLeftAndRight});
-  margin: auto;
 
   @if $paddingBottom != false {
     padding-bottom: $paddingBottom;

@@ -12,7 +12,6 @@ h2 {
   outline: none;
   border: none;
   text-decoration: none;
-  text-transform: capitalize;
   transition: 0.2s linear;
 }
 
@@ -85,6 +84,100 @@ body {
 
     &:checked::before {
       left: 2rem;
+    }
+  }
+}
+
+.custom_button-m {
+  width: 100%;
+  height: 1.8rem;
+  box-shadow: 0 6px 12px -4px rgb(39 76 119 / 16%);
+  border-radius: 2rem;
+  position: relative;
+  z-index: 1;
+
+  &::before {
+    content: 'Daily';
+    position: absolute;
+    z-index: 12;
+    color: $halfSecondary;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 14px;
+    top: 0.5rem;
+    left: 4.1rem;
+  }
+
+  &::after {
+    content: 'Weekly';
+    position: absolute;
+    z-index: 12;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 14px;
+    color: $halfSecondary;
+    top: 0.5rem;
+    right: 3rem;
+  }
+
+  & input {
+    position: relative;
+    width: 100%;
+    height: 2.4rem;
+    appearance: none;
+    background-color: $primary;
+    outline: none;
+    border-radius: 2rem;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 50%;
+      height: 2.4rem;
+      border-radius: 2rem;
+      background-color: $secondaryLow;
+      transition: 0.5s;
+    }
+
+    &:checked::before {
+      left: 50%;
+    }
+  }
+}
+
+.custom_button-l {
+  width: 5rem;
+  height: 2.5rem;
+  box-shadow: 0 6px 12px -4px rgb(39 76 119 / 16%);
+  border-radius: 2rem;
+
+  & input {
+    position: relative;
+    width: 5rem;
+    height: 2.5rem;
+    appearance: none;
+    background-color: $btn-toggle;
+    outline: none;
+    border-radius: 2rem;
+
+    &:checked {
+      background-color: $btn-toggle-active;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 1.8rem;
+      height: 1.8rem;
+      border-radius: 2rem;
+      background-color: $white;
+      top: 0.26rem;
+      left: 0.2rem;
+      transition: 0.5s;
+    }
+
+    &:checked::before {
+      left: 3rem;
     }
   }
 }
@@ -194,7 +287,7 @@ body {
     button {
       @include flex-config(false, false, false, center, 2.7rem);
 
-      padding: 1.6rem 0;
+      padding: 1.43rem 0;
       width: 100%;
       background: transparent;
       font-size: $fontSizeTitleS;
@@ -241,10 +334,10 @@ body {
       color: $secondaryLow;
     }
 
-    @include flex-config(false, false, column, false, 4.5rem);
+    @include flex-config(false, false, column, center, 4.5rem);
 
     &__inform-items {
-      @include flex-config(false, false, false, center, 4.5rem, wrap);
+      @include flex-config(center, false, false, center, 4.5rem, wrap);
     }
 
     &__item {
@@ -252,12 +345,15 @@ body {
       box-shadow: $box-shadow;
       padding: 2.1rem 3.6rem 1.7rem 2.1rem;
       border-radius: 2rem;
-      @include flex-config(false, false, column, center, 1.5rem, wrap);
+      width: 26.4rem;
+      height: 15.4rem;
 
+      @include flex-config(space-between, false, column, center, false);
     }
 
     &__title {
       width: 100%;
+
       @include flex-config(space-between, false, false, center);
 
       svg {
@@ -273,12 +369,19 @@ body {
       }
     }
 
+    &__graphic {
+      width: 11rem;
+      height: 8rem;
+    }
+
     &__flex_weather {
-      @include flex-config(false, false, false, center, 2rem);
+      @include flex-config(space-between, false, false, center);
+
+      width: 100%;
     }
 
     &__content-weather {
-      @include flex-config(false, false, column, false, 1rem);
+      @include flex-config(space-between, false, column, false, 0.5rem);
     }
 
     &__weather_city_name {
@@ -293,35 +396,37 @@ body {
       font-weight: 700;
       line-height: 2.4rem;
       color: $halfSecondary;
-
     }
 
     &__weather_value {
       font-size: $fontSizeTextM;
       font-weight: 600;
       line-height: 1.4rem;
-      color: #879CB3;
+      color: #879cb3;
 
       p {
         .blue {
-          color: #00B2FF;
-          padding-right: .8rem;
+          color: #00b2ff;
+          padding-right: 0.4rem;
         }
 
         .orange {
-          color: #FF7A00;
-          padding-left: .8rem;
+          color: #ff7a00;
+          padding-left: 0.4rem;
         }
       }
-
     }
 
-    &__flex-temperature {
-      @include flex-config(false, false, column, false, 2rem);
+    &__flex_temperature {
+      @include flex-config(false, false, column, false);
+
+      width: 100%;
     }
 
     &__weather-flex-content {
-      @include flex-config(space-between, false, false, center, 5rem);
+      @include flex-config(space-between, false, false, center);
+
+      width: 100%;
     }
 
     &__weather-flex-data {
@@ -330,6 +435,7 @@ body {
 
     &__weather-flex-btn {
       @include flex-config(false, false, column, center, 2rem);
+
       cursor: pointer;
 
       svg:hover {
@@ -337,19 +443,275 @@ body {
           fill: $secondary;
         }
       }
-
     }
 
     &__value {
       @include flex-config(space-between, false, center, center, 1.5rem);
+
       font-size: 3.4rem;
       font-weight: 500;
       line-height: 4rem;
+      color: $halfSecondary;
     }
 
-    &__weather-flex-signature {
+    &__weather_flex_signature {
       @include flex-config(space-between, false, center, center, 1.5rem);
-      width: 105%;
+
+      width: 100%;
+
+      &-input {
+        @include flex-config(space-between, false, center, center);
+
+        width: 100%;
+      }
+    }
+
+    &__signature-input {
+      margin-right: -1rem;
+    }
+
+    &__Wifi_signature {
+      @include flex-config(space-between, false, false, center);
+
+      width: 100%;
+      font-size: $fontSizeTextL;
+
+      p {
+        color: $secondaryLow;
+        padding: 0 0.3rem;
+      }
+
+      .sent {
+        @include flex-config(space-between, false, false, center);
+
+        span {
+          color: #9b4343;
+        }
+      }
+
+      .received {
+        @include flex-config(space-between, false, false, center);
+
+        span {
+          color: #439b57;
+        }
+      }
+    }
+
+    &__Wifi {
+      color: $halfSecondary;
+      font-size: $fontSizeTitleM;
+      font-weight: 700;
+      line-height: 1.8rem;
+      align-items: start;
+
+      &_content {
+        @include flex-config(space-between, false, column, false, 1.5rem);
+
+        span {
+          color: $halfSecondary;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+
+  .slider {
+    position: relative;
+    max-width: 58rem;
+    padding: 3rem 5rem;
+    background-image: url('https://s3-alpha-sig.figma.com/img/8c57/51dd/1b055b54322b254a406edde04b0c6a7a?Expires=1642377600&Signature=H2-Fi4pZ1YjN12L7ng5OIiUitM75KD3HGJ2cQD9pCdSl5vbatiVoM6nxh8YcYbKC~vabjfOts8aNQGPzNi~jZKrnMNR8mlc3VKBXrf7SCXztbc3w9wvjYjudmuc-u4wbW7J90jBsr4GmP68wrqMORpTr22rDomnSoI-cfw0yRjCvdzQLybydwxhajaHR8tY4GW1hr0VRiuR96tuw1M3Gz~F~yrp0h~GJBhmvk5V2n6ua1D8U2YuTzqeldJM4ZTOGxKT1xHeikAAA-0DONY~oCzN6K2GjHzPVQZ5tCApy4qgVogtSxb9Yv4Lu6RODjBfBXXab53k7EpOb8LeSC8baHw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA');
+    background-size: cover;
+    position: center;
+    background-repeat: no-repeat;
+    font-size: $fontSizeTextM;
+    font-weight: 600;
+    line-height: 2.1rem;
+    color: $primary;
+    border-radius: 2rem;
+    box-shadow: $box-shadow;
+
+    h2 {
+      font-size: $fontSizeTitleL;
+      font-weight: 800;
+      line-height: 2.4rem;
+      margin-bottom: 2rem;
+    }
+
+    h3 {
+      font-size: $fontSizeTitleS;
+      font-weight: 700;
+      line-height: 20px;
+      color: $primary;
+    }
+
+    &__title {
+      @include flex-config(space-between, false, false, center);
+    }
+
+    &__stars {
+      @include flex-config(false, false, false, center, 0.2rem);
+    }
+
+    &__rating {
+      @include flex-config(false, false, false, center, 0.5rem);
+
+      span {
+        opacity: 0.7;
+      }
+    }
+
+    &__text {
+      font-size: 13px;
+      font-weight: 600;
+      line-height: 21px;
+
+      @include flex-config(false, false, column, start, 2rem);
+
+      button {
+        padding: 0.7rem 3.2rem;
+        color: $secondary;
+        background-color: $primary;
+        border-radius: 1.2rem;
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 1.4rem;
+
+        &:hover {
+          color: $secondaryLow;
+          background-color: $secondary;
+        }
+      }
+    }
+
+    .next {
+      position: absolute;
+      right: 2%;
+      bottom: 45%;
+
+      & svg:hover {
+        path {
+          fill: $secondaryLow;
+        }
+      }
+    }
+
+    .prev {
+      position: absolute;
+      left: 2%;
+      bottom: 45%;
+
+      & svg:hover {
+        path {
+          fill: $secondaryLow;
+        }
+      }
+    }
+
+    .slider__btn_list {
+      @include flex-config(center, false, false, center, 2rem);
+
+      button {
+        width: 0.6rem;
+        height: 0.6rem;
+        background-color: $boxBackground;
+        border-radius: 2rem;
+      }
+
+      .active {
+        background-color: $halfSecondary;
+        width: 0.6rem;
+        height: 0.6rem;
+        border-radius: 2rem;
+      }
+    }
+  }
+
+  .content__panel {
+    @include flex-config(center, false, false, center, 4.5rem, wrap);
+
+    .functionality__item {
+      max-width: 21rem;
+      height: auto;
+      padding: 3rem;
+      gap: 2.5rem;
+
+      .functionality {
+        &__flex_message {
+          @include flex-config(space-between, false, column, start, 1.7rem);
+
+          font-size: $fontSizeTextL;
+          font-weight: 600;
+          line-height: 16px;
+          color: $halfSecondary;
+
+          &_item {
+            .active {
+              position: relative;
+
+              &::before {
+                content: '';
+                position: absolute;
+                border-radius: 2rem;
+                width: 0.8rem;
+                height: 0.8rem;
+                top: 4px;
+                left: -1.4rem;
+                background-color: #9b4343;
+              }
+            }
+
+            .message {
+              position: relative;
+
+              &::before {
+                content: '';
+                position: absolute;
+                border-radius: 2rem;
+                width: 0.8rem;
+                height: 0.8rem;
+                top: 4px;
+                left: -1.4rem;
+                background-color: #439b57;
+              }
+            }
+
+            .time_message {
+              color: $secondaryLow;
+              font-size: 12px;
+              font-weight: 500;
+              line-height: 14px;
+              margin-top: 4px;
+            }
+          }
+        }
+
+        &__flex_panel {
+          @include flex-config(space-between, false, column, start, 3.9rem);
+
+          font-size: 12px;
+          font-weight: 600;
+          line-height: 16px;
+          color: $halfSecondary;
+        }
+      }
+
+      .quickPanel {
+        &__item {
+          @include flex-config(space-between, false, false, center, 1rem);
+
+          width: 100%;
+        }
+
+        &__content {
+          @include flex-config(false, false, false, center, 0.9rem);
+
+          svg {
+            width: 22px;
+            height: 22px;
+          }
+        }
+      }
     }
   }
 }
