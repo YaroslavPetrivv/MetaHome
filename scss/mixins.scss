@@ -9,8 +9,8 @@
   $flex: false,
   $flex-direction: false,
   $align-items: false,
-  $gap:false,
-  $flex-wrap:false
+  $gap: false,
+  $flex-wrap: false
 ) {
   display: flex;
 
@@ -45,7 +45,6 @@
   $paddingBottom: false
 ) {
   padding: 0 calc(50% - #{$paddingLeftAndRight});
-  margin: auto;
 
   @if $paddingBottom != false {
     padding-bottom: $paddingBottom;

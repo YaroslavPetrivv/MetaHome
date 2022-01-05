@@ -70,7 +70,7 @@
       <recent name="C:\Users\Admin\Desktop\MetaHome" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.format:lint:js:fix">
+  <component name="RunManager" selected="npm.dev">
     <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -123,11 +123,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.dev" />
         <item itemvalue="npm.format:lint:js:fix" />
         <item itemvalue="npm.prettier" />
         <item itemvalue="npm.format:lint:scss:fix" />
         <item itemvalue="npm.format:lint:scss" />
-        <item itemvalue="npm.dev" />
       </list>
     </recent_temporary>
   </component>
