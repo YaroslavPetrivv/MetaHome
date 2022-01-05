@@ -51,6 +51,8 @@ body {
   @include wrapper(61rem, 4.9rem, 4.9rem);
 }
 
+/* stylelint-disable no-descending-specificity */
+
 .custom_button-s {
   width: 3.5rem;
   height: 1.8rem;
@@ -66,10 +68,6 @@ body {
     outline: none;
     border-radius: 2rem;
 
-    &:checked {
-      background-color: $btn-toggle-active;
-    }
-
     &::before {
       content: '';
       position: absolute;
@@ -80,6 +78,10 @@ body {
       top: 0.24rem;
       left: 0.2rem;
       transition: 0.5s;
+    }
+
+    &:checked {
+      background-color: $btn-toggle-active;
     }
 
     &:checked::before {
@@ -182,6 +184,7 @@ body {
   }
 }
 
+/* stylelint-enable no-descending-specificity */
 .header {
   width: 100%;
   position: relative;
@@ -277,6 +280,7 @@ body {
     @include flex-config(false, false, column, false, 1rem);
   }
 
+  /* stylelint-disable no-descending-specificity */
   &__item {
     padding-left: 6rem;
     min-width: 26.4rem;
@@ -326,6 +330,8 @@ body {
     }
   }
 
+  /* stylelint-enable no-descending-specificity */
+
   .functionality {
     .signature {
       font-size: 1.2rem;
@@ -339,6 +345,8 @@ body {
     &__inform-items {
       @include flex-config(center, false, false, center, 4.5rem, wrap);
     }
+
+    /* stylelint-disable no-descending-specificity */
 
     &__item {
       background-color: $boxBackground;
@@ -368,6 +376,8 @@ body {
         }
       }
     }
+
+    /* stylelint-enable no-descending-specificity */
 
     &__graphic {
       width: 11rem;
@@ -432,6 +442,8 @@ body {
     &__weather-flex-data {
       @include flex-config(false, false, false, column, center, 1rem);
     }
+
+    /* stylelint-disable no-descending-specificity */
 
     &__weather-flex-btn {
       @include flex-config(false, false, column, center, 2rem);
@@ -516,13 +528,13 @@ body {
     }
   }
 
+  /* stylelint-enable no-descending-specificity */
+
   .slider {
     position: relative;
     max-width: 58rem;
-    padding: 3rem 5rem;
     background-image: url('https://s3-alpha-sig.figma.com/img/8c57/51dd/1b055b54322b254a406edde04b0c6a7a?Expires=1642377600&Signature=H2-Fi4pZ1YjN12L7ng5OIiUitM75KD3HGJ2cQD9pCdSl5vbatiVoM6nxh8YcYbKC~vabjfOts8aNQGPzNi~jZKrnMNR8mlc3VKBXrf7SCXztbc3w9wvjYjudmuc-u4wbW7J90jBsr4GmP68wrqMORpTr22rDomnSoI-cfw0yRjCvdzQLybydwxhajaHR8tY4GW1hr0VRiuR96tuw1M3Gz~F~yrp0h~GJBhmvk5V2n6ua1D8U2YuTzqeldJM4ZTOGxKT1xHeikAAA-0DONY~oCzN6K2GjHzPVQZ5tCApy4qgVogtSxb9Yv4Lu6RODjBfBXXab53k7EpOb8LeSC8baHw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA');
     background-size: cover;
-    position: center;
     background-repeat: no-repeat;
     font-size: $fontSizeTextM;
     font-weight: 600;
@@ -530,6 +542,17 @@ body {
     color: $primary;
     border-radius: 2rem;
     box-shadow: $box-shadow;
+
+    &__blur {
+      width: 100%;
+      height: 100%;
+      background: rgb(39 76 119 / 50%);
+      border-radius: 2rem;
+    }
+
+    &__container {
+      padding: 3rem 5rem;
+    }
 
     h2 {
       font-size: $fontSizeTitleL;
@@ -544,6 +567,8 @@ body {
       line-height: 20px;
       color: $primary;
     }
+
+    /* stylelint-disable no-descending-specificity */
 
     &__title {
       @include flex-config(space-between, false, false, center);
@@ -607,6 +632,9 @@ body {
         }
       }
     }
+    /* stylelint-enable no-descending-specificity */
+
+    /* stylelint-disable no-descending-specificity */
 
     .slider__btn_list {
       @include flex-config(center, false, false, center, 2rem);
@@ -696,7 +724,7 @@ body {
         }
       }
 
-      .quickPanel {
+      .quick_panel {
         &__item {
           @include flex-config(space-between, false, false, center, 1rem);
 
@@ -712,6 +740,8 @@ body {
           }
         }
       }
+
+      /* stylelint-enable no-descending-specificity */
     }
   }
 }
